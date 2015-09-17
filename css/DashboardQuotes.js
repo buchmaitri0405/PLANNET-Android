@@ -1,0 +1,13 @@
+[{"Id":1,"Quote":"You can use all the quantitative data you can get, but you still have to distrust it and use your own intelligence and judgment."},
+{"Id":2,"Quote":"You can have data without information, but you cannot have information without data."},
+{"Id":3,"Quote":"A hacker doesn't deliberately destroy data or profit from his activities."},
+{"Id":4,"Quote":"Great dreams of great dreamers are always transcended."},
+{"Id":5,"Quote":"Be a yardstick of quality. Some people aren't used to an environment where excellence is expected."},
+{"Id":6,"Quote":"Ralph Drayer, former chief logistics officer at Procter & Gamble, during a panel discussion on technology: “At P&G, we decided to stop being so company-centric, and start being customer-centric and demand-driven. We found when you do that, some amazing things happen.”"},
+{"Id":7,"Quote":"Leadership is a potent combination of strategy and character. But if you must be without one, be without the strategy. "},
+{"Id":8,"Quote":"Business opportunities are like buses, there’s always another one coming"},
+{"Id":9,"Quote":"Far and away the best prize that life offers is the chance to work hard at work worth doing. – Theodore Roosevelt"},
+{"Id":10,"Quote":" Even if you are on the right track, You’ll get run over if you just sit there. – Will Rogers"},
+{"Id":11,"Quote":"Whether you think you can or whether you think you can’t, you’re right! – Henry Ford"},
+{"Id":12,"Quote":"Imagination is everything. It is the preview of life’s coming attractions. – Albert Einstein"},
+{"Id":13,"Quote":"You miss 100 percent of the shots you don’t take – Wayne Gretzky"}]

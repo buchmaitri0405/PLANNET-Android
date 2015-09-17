@@ -1,0 +1,305 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html,body
+{
+    
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body {
+	-webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+	-webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+    background-color:#FFF
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+	background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+	background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+	background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #FFF),
+        color-stop(0.51, #FFF)
+    );
+	background-attachment:fixed;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:14px;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	text-transform:uppercase;
+	width:100%;
+	color: #06C;
+}
+
+.radio-toolbar label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:16px;
+	
+}
+
+form input[type="radio"]:checked + label {
+  background-color:#FF0;
+ }
+
+.radio-toolbar input[type="radio"]:checked + label {
+	
+    background-color:#bbb;
+}
+
+.radioDiv label { color:blue; }
+/* Portrait layout (default) */
+.app {
+	background:url(../img/facebook-picNEW.png) no-repeat center top; /* 170px x 200px */
+	position:absolute;             /* position in the center of the screen */
+	left:233px;
+	top:317px;
+	height:100px;                   /* text area height */
+	width:200px;                   /* text area width */
+	text-align:center;
+	padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+	margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+pre{
+    white-space: pre-wrap;
+}
+
+logo
+{	
+    border-radius: 120px;
+    background: url(img/round.png);
+    background-position: right top;
+ 
+    width: 30px;
+    height: 25px;    
+
+}
+header
+{	
+	position:absolute;
+	font-size:16px;
+	    top: 10px;
+		left:40%;!important  
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:16px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#428bca;
+    display:block;
+}
+
+.event.received {
+    background-color:#428bca;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+a:link {
+    text-decoration: none;
+	color:#428bca;
+}
+
+a:visited {
+    text-decoration: none;
+	color:#428bca;
+}
+
+a:hover {
+    text-decoration:none;
+	color:#428bca;
+}
+
+a:active {
+    text-decoration: none;
+	color:#428bca;
+}
+
+.menu-top {
+  position: relative;
+  text-align:center;
+
+  width:100%;
+  border: 1px solid transparent;
+  background-color:#db704c;
+  font-color:#fff;
+}
+.menu-bottom {
+  position:relative;
+  text-align:center;
+    height:93%;
+   width:100%;
+  border: 1px solid transparent;
+  background-color:#5b84ff;
+  font-color:#FFF;
+  
+}
+
+.panel-group .list-group {
+	margin-bottom: 0;
+}
+
+.panel-group .list-group .list-group-item {
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+}
+
+.panel-group .list-group .list-group-item:last-child {
+	border-bottom: none;
+}
+
+.boxdiv {
+   padding: 10px;
+    border: 2px solid #00008B;
+	margin-left:25px;
+	margin-right:25px;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+.boxdiv1 {
+  
+    padding: 10px;
+    border: 2px solid #00008B;
+	margin-left:25px;
+	margin-right:25px;
+	margin-top:25px;
+	margin-bottom:25px;
+   
+}
+.GeneratedMarquee {
+font-family:'Arial, sans-serif';
+font-size:1.5em;
+line-height:1.3em;
+color:#000066;
+background-color:#a29b93;
+font-variant:small-caps;
+text-align:center;
+margin:0em;
+
+}
+.bottom
+{
+	position:relative;
+	bottom:0;
+	padding:0px;
+
+}
+some
+{
+	  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.btn-light {
+  color: #fff;
+  background-color: #1E8FBB;
+  border-color: #1E8FBB;
+}
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light.active,
+.open .dropdown-toggle.btn-light {
+  color: #fff;
+  background-color:#88C9F9;
+  border-color:#88C9F9;
+}
+.btn-light:active,
+.btn-light.active,
+.open .dropdown-toggle.btn-light {
+  background-image: none;
+}
+.btn-light.disabled,
+.btn-light[disabled],
+fieldset[disabled] .btn-light,
+.btn-light.disabled:hover,
+.btn-light[disabled]:hover,
+fieldset[disabled] .btn-light:hover,
+.btn-light.disabled:focus,
+.btn-light[disabled]:focus,
+fieldset[disabled] .btn-light:focus,
+.btn-light.disabled:active,
+.btn-light[disabled]:active,
+fieldset[disabled] .btn-light:active,
+.btn-light.disabled.active,
+.btn-light[disabled].active,
+fieldset[disabled] .btn-light.active {
+  background-color: ##88C9F9;
+  border-color: ##88C9F9;
+}
+.btn-light .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
