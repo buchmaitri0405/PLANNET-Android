@@ -17,9 +17,10 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
 
+	<icon src="www/img/plannet.png" />
 	
 <preference name="SplashScreen" value="screen" />
-<preference name="SplashScreenDelay" value="10000" /> 
+
 
     <platform name="android">
         <allow-intent href="market:*" />
