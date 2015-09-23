@@ -66,6 +66,8 @@
 		   <feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
         </feature>
+		<preference name="StatusBarOverlaysWebView" value="false" /> 
+
 		
 		<feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
