@@ -1,0 +1,146 @@
+  
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  
+      <br />
+   <div id="card">
+   <form id="myForm" role="form" data-toggle="validator" >
+  	 <div class="front" >   
+	   <div class="boxdiv" ng-show="inProgress" style="background-color:#fffaa5; ">
+  			<div ng-show="!quizOver"  >
+                
+  				 <h3>
+         		 <p align="center" id="question" style="color:#494CA2; text-transform:none "><br>Question {{id+1}}.</br> </p> </h3><br /><h4><p align="center" style="text-transform:none;">{{question}}</p> </h4>
+         		 <br />
+          		 <br />
+                    <div align="center">
+                    <div class="form-group"  ng-hide="!answerMode"  ng-repeat="option in options">
+
+                          <label>
+                            <input type="radio" name="answer" value="{{option}}"  required>{{option}}
+                          </label>
+
+                     </div>
+                    </div>
+
+                  <br />
+                  <br />
+                  <div align="center">
+                  <p> <button type="submit"  id="toggle-btn" ng-click="checkAnswer()" ng-show="answerMode" class="btn btn-info">Submit</button></p>
+                
+                     <p>&nbsp;</p>
+                 
+                  </div>
+         
+ 			 </div>
+
+           
+          <div ng-show="quizOver" align="center">
+             <b><h4>END OF QUIZ</h4></b><br />
+            <b>  Your score is {{score}}!!</b> <br><br />
+            <button ng-click="reset()" class="btn btn-info">ReTake Quiz</button>
+            <br />
+          </div>
+       </div>
+  	</div>
+       </form>
+    <div class="back" >   
+     	<div class="boxdiv" ng-show="!answerMode" style="background-color:#fffaa5">
+    		 <div ng-show="!answerMode" align="center">
+   				<h3><p  style="color:#494CA2; text-transform:none"><b>Question {{id+1}} </b> </p> </h3><br /><h4><p style="text-transform:none">{{question}}</p></h4>
+                 <br />
+                  <br />
+               <div ng-show="!answerMode">
+            
+                <strong> ANSWER IS : <font color="green">{{answer}}</font></strong>
+                 
+                </div>
+                <br />
+
+                 <div id="score" ng-hide="quizOver" align="center"  style="background-color:#00008B; color:#fff; margin-bottom:10px; vertical-align: middle; " >
+
+                     <strong>Score: {{score}}</strong>
+                 </div>
+
+             <br />
+
+
+
+                 <div ng-show="!answerMode" align="center">
+                     <p>
+                      <span ng-show="correctAns"><b><font color="green"><br />
+                          Your Answer Is Correct!!</font></b></span>
+                      <span ng-show="!correctAns"><b><font color="red"><br />
+                          Sorry!! Your Answer Is Incorrect!</font> </b></span>
+                         <br />
+                     </p>
+                     <br>
+
+                     <button  ID="toggle-btn1" ng-click="nextQuestion()" class="btn btn-info">Next</button>
+
+                     <p>&nbsp;</p>
+                 </div>
+             </div>
+
+
+           </div>
+     </div>
+</div>
+
+  
+  <br />
+  <br />
+  <div class="intro" ng-show="!inProgress">
+
+           <div class="panel panel-default">
+    		<div class="panel-body" align="justify" style="font-size: 12px;  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform:none;">
+               <div align="center" style="font-size: 16px;  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif">
+
+    <u><strong>Welcome to LEARN-DP Quiz</strong></u>
+    
+</div>
+  <br />In this Flashcard Quiz you will be presented with True or False questions.  This is to test your knowledge in Demand Planning, Supply Chain Management, and S&OP.  <br /><br />
+
+This will cumulatively score your correct answers while you continue the game.  You can end the game anytime by clicking on the Home Button or the Demand Planning LLC Logo.  Have fun!  
+
+
+
+			<br />
+
+
+    		</div>
+      
+      
+    </div>
+    <br />
+    <br />
+  <p align="center">
+      <button  class="btn btn-info" a id="startQuiz" ng-click="start()"  >Start the Quiz</button>
+      </p>
+  </div>
+      
+  <script>
+
+
+
+  
+
+          $("#card").flip({
+              trigger: 'manual'
+          });
+          document.getElementById("toggle-btn").onclick = function () {
+
+              $("#card").flip('toggle');
+          }
+          document.getElementById("toggle-btn1").onclick = function () {
+
+              $("#card").flip('toggle');
+          }
+
+          $(document).ready(function() {
+              $('#myForm').validator();
+
+          });
+
+
+       
+      </script>

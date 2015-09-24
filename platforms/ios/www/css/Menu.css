@@ -1,0 +1,30 @@
+
+	ul li { 
+		list-style: none;
+		height: 44px;  		 
+	} 
+	#nav1 li a { 
+	left-margin:0px;
+		width: 100%; 
+		height: 40px; 
+		line-height: 53px; 
+		color: #333; 
+		text-decoration: none; 
+ 		display: block;
+		border-bottom: 4px solid #999;  
+		padding-left: 0px; 
+		-webkit-transition: .2s all linear;
+		-moz-transition: .2s all linear;
+		-o-transition: .2s all linear;
+		transition: .2s all linear;	
+	} 
+	#nav1 li a:hover { 
+		border-width: 35px;
+		height: 9px; 
+	
+	}
+	#nav1 .color1 a { border-color: #CC3300; } 
+	#nav1 .color2 a { border-color: #36F; } 
+	
+	
+	

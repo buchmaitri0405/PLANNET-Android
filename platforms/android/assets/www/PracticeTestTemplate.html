@@ -1,0 +1,88 @@
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+ <div class="quiz-area" ng-show="inProgress">
+
+   <div ng-show="!quizOver" align="center" style="text-transform:none; font-size:18px">
+ 		<h3>
+		<p align="center" id="question" style="color:#494CA2; text-transform:none;"><b>Question {{id+1}} </b> </p> </h3><br /><p align="left"  >{{question}}</p>
+		
+    	<br />
+        <br />
+        <form id="myForm" data-toggle="validator" role="form" >
+	 	<div id="Options" ng-repeat="option in options" style="font-style: normal" align="left">
+
+             
+					<input id="answerOption" type="radio" name="answer" value="{{option}}" align="left" required>
+					{{option}} <br /><br>
+
+     </div>
+            <br />
+             
+                
+             <div align="center">
+	           
+	 <button type="submit"  ng-click="checkAnswer()"  class="btn btn-info">Next</button>
+
+	 </div>
+     </form>
+   </div>
+
+	<div ng-show="quizOver" align="center">
+    <br />
+		<b>End of Practice Exam!!</b><br />
+                <br />
+        <br>
+        <br>
+Here are your results<br /><br><br>
+        <p><br>  <img src="img/ExamResult.png" width="60" height="100" align="right" class="media-object">
+<div style="list-style:none; text-transform: none;";>
+        <strong>
+<li>
+Total Questions: 10 </li>
+<li> Correct Responses: {{score}} </li>
+<li> Your Score: {{Math.round(100*score/10)}}% </li>
+
+        </strong>
+    </div></br>
+<br />
+<br />
+<br />
+<br />
+  		</p>
+    
+	  <button ng-click="reset()" class="btn btn-info">Retake Test</button>
+	</div>
+
+	
+</div>
+  <br />
+  <br />
+<div class="intro" ng-show="!inProgress">
+	
+           <div class="panel panel-default">
+    		<div class="panel-body" align="justify" style="font-size: 12px;  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif; text-transform:none;">
+               <div align="center" style="font-size: 16px;  font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif">
+
+    <u><strong>CADP Certification Practice Test</strong></u>
+    
+</div>
+  <br />
+    In this test you will have 10 questions. Choose the best answer and click on Next to move to the next question.<br><br>
+    On completion of the test you will get a cumulative score!
+
+			<br />
+    		</div>
+      
+  </div>
+  <br />
+  <br />
+<p align="center">
+	<button class="btn btn-info" id="startQuiz" ng-click="start()">Start the Test</button>
+    </p>
+</div>
+
+ <script>
+     $(document).ready(function() {
+         $('#myForm').validator();
+
+     });
+ </script>
