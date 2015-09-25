@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
       <link rel="stylesheet" href="bower_components/html5-marquee/css/marquee.css">
       <link href="css/thumbnail-gallery.css" rel="stylesheet">
+      <script src="cordova.js"></script>
       <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="bower_components/angular/angular.min.js"></script>
@@ -183,7 +184,7 @@
 <br>
 
 <div align="center">
-<a href="http://demandplanning.net/testimonials_clients.htm" style="font-size:14px"> <button  class="btn btn-light" background-img="" >More Testimonials</button></a>
+<a href="javascript:cordova.InAppBrowser.open('http://demandplanning.net/testimonials_clients.htm', '_blank', 'location=yes')" style="font-size:14px"> <button  class="btn btn-light" background-img="" >More Testimonials</button></a>
 </div> 
 
 <script src="js/testimonial.js"> </script>
@@ -205,6 +206,8 @@
 </div> -->
 
 <script>
+
+   
     $(function(){
 
 

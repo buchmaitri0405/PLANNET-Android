@@ -19,71 +19,76 @@
     <allow-intent href="geo:*" />
 
 
-<icon src="icon.png" />
-<splash src="splash.png" />
-
-<preference name="SplashScreen" value="screen" />
+    <icon src="www/icon.png" />
+    <splash src="www/splash.png" />
 
 
-<preference name="StatusBarOverlaysWebView" value="false" /> 
-<preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarOverlaysWebView" value="false" /> 
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
 
-<preference name="orientation" value="portrait" />
+    <preference name="orientation" value="portrait" />
 
     <platform name="android">
         <allow-intent href="market:*" />
-	  <feature name="InAppBrowser">
-      <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-  </feature>
-  
-    <!-- you can use any density that exists in the Android project -->
-	<splash src="www/img/splash/hdpi/splash_land.png" density="land-hdpi"/>
-    <splash src="www/img/splash/ldpi/splash_land.png" density="land-ldpi"/>
-    <splash src="www/img/splash/mdpi/splash_land.png" density="land-mdpi"/>
-    <splash src="www/img/splash/xhdpi/splash_land.png" density="land-xhdpi"/>
-	 <splash src="www/img/splash/xxhdpi/splash_land.png" density="land-xxhdpi"/>
-    <splash src="www/img/splash/hdpi/splash.png" density="port-hdpi"/>
-    <splash src="www/img/splash/ldpi/splash.png" density="port-ldpi"/>
-    <splash src="www/img/splash/mdpi/splash.png" density="port-mdpi"/>
-    <splash src="www/img/splash/xhdpi/splash.png" density="port-xhdpi"/>
-	<splash src="www/img/splash/xxhdpi/splash.png" density="port-xxhdpi"/>
+    	<feature name="InAppBrowser">
+            <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+        </feature>
+      
+        <!-- you can use any density that exists in the Android project -->
+    	<splash src="www/img/splash/hdpi/splash_land.png" density="land-hdpi"/>
+        <splash src="www/img/splash/ldpi/splash_land.png" density="land-ldpi"/>
+        <splash src="www/img/splash/mdpi/splash_land.png" density="land-mdpi"/>
+        <splash src="www/img/splash/xhdpi/splash_land.png" density="land-xhdpi"/>
+    	<splash src="www/img/splash/xxhdpi/splash_land.png" density="land-xxhdpi"/>
+        <splash src="www/img/splash/hdpi/splash.png" density="port-hdpi"/>
+        <splash src="www/img/splash/ldpi/splash.png" density="port-ldpi"/>
+        <splash src="www/img/splash/mdpi/splash.png" density="port-mdpi"/>
+        <splash src="www/img/splash/xhdpi/splash.png" density="port-xhdpi"/>
+    	<splash src="www/img/splash/xxhdpi/splash.png" density="port-xxhdpi"/>
+    	
+        <icon src="www/img/icon/android/drawable-hdpi/plannet.png" density="hdpi"/> 
+        <icon src="www/img/icon/android/drawable-ldpi/plannet.png" density="ldpi"/> 
+        <icon src="www/img/icon/android/drawable-mdpi/plannet.png" density="mdpi"/> 
+        <icon src="www/img/icon/android/drawable-xhdpi/plannet.png" density="xhdpi"/> 
+        <icon src="www/img/icon/android/drawable-xxhdpi/plannet.png" density="xxhdpi"/> 
+        <icon src="www/img/icon/android/drawable-xxxhdpi/plannet.png" density="xxxhdpi"/> 
 	
-<icon src="www/img/icon/android/drawable-hdpi/plannet.png" density="hdpi"/> 
-    <icon src="www/img/icon/android/drawable-ldpi/plannet.png" density="ldpi"/> 
-    <icon src="www/img/icon/android/drawable-mdpi/plannet.png" density="mdpi"/> 
-    <icon src="www/img/icon/android/drawable-xhdpi/plannet.png" density="xhdpi"/> 
-<icon src="www/img/icon/android/drawable-xxhdpi/plannet.png" density="xxhdpi"/> 
-<icon src="www/img/icon/android/drawable-xxxhdpi/plannet.png" density="xxxhdpi"/> 
-	
-   <feature name="SplashScreen">
-      <param name="android-package" value="org.apache.cordova.SplashScreen" />
-  </feature>
+        <feature name="SplashScreen">
+            <param name="android-package" value="org.apache.cordova.SplashScreen" />
+        </feature>
   
-   <feature name="Notification">
-      <param name="android-package" value="org.apache.cordova.Notification" />
-  </feature>
+        <feature name="Notification">
+            <param name="android-package" value="org.apache.cordova.Notification" />
+        </feature>
 
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
 		
-		   <feature name="StatusBar">
+		<feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
         </feature>
-		<preference name="StatusBarOverlaysWebView" value="false" /> 
+		
+        
+        <preference name="SplashScreen" value="splash" />
+        <preference name="SplashScreenDelay" value="1000" />
+        <preference name="FadeSplashScreen" value="false"/>
+        <preference name="FadeSplashScreenDuration" value="4"/>
+        <preference name="ShowSplashScreenSpinner" value="false"/>
+        
+        <preference name="orientation" value="portrait" />
+
 
 		
 		<feature name="InAppBrowser">
-        <param name="ios-package" value="CDVInAppBrowser" />
-</feature>
+                <param name="ios-package" value="CDVInAppBrowser" />
+        </feature>
 
-	<feature name="SplashScreen">
-        <param name="ios-package" value="CDVSplashScreen" />
-</feature>
-			
-			
-		
+    	<feature name="SplashScreen">
+            <param name="ios-package" value="CDVSplashScreen" />
+        </feature>
 		
     </platform>
 </widget>
