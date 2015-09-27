@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.demandplanning.PLANNET" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget
+        id="com.demandplanning.PLANNET"
+        version="1.0.0"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:gap   = "http://phonegap.com/ns/1.0">
     <name>PLANNET</name>
     <description>
        PLANNET - A guide to SCM, Demand Planning and Supply chain management
@@ -23,6 +28,31 @@
   
 
     <preference name="orientation" value="portrait" />
+
+    <!-- gs:ini -->
+    <!-- iOS ipad -->
+    <gap:splash src="img/splash2/splash.png" gap:platform="ios" width="1024" height="768" />
+    <gap:splash src="img/splash2/splash-ipad-portrait.png" gap:platform="ios" width="768" height="1024" />
+    <!-- iOS iphone5 -->
+    <gap:splash src="img/splash2/splash-iphone5-landscape.png" gap:platform="ios" width="1136" height="640" />
+    <gap:splash src="img/splash2/splash-iphone5-portrait.png" gap:platform="ios" width="640" height="1136" />
+    <!-- iOS iphone4 -->
+    <gap:splash src="img/splash2/splash-iphone4-landscape.png" gap:platform="ios" width="960" height="640" />
+    <gap:splash src="img/splash2/splash-iphone4-portrait.png" gap:platform="ios" width="640" height="960" />
+
+    <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+
+    <gap:config-file platform="ios" parent="UIStatusBarHidden">
+        <false/>
+    </gap:config-file>
+
+    <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance">
+        <false/>
+    </gap:config-file>
+
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+
+    <!-- gs:fin-->
 
     <platform name="android">
         <allow-intent href="market:*" />
@@ -77,7 +107,7 @@
                 <param name="ios-package" value="CDVInAppBrowser" />
         </feature>
 
-	
+
 
 </platform>
 
